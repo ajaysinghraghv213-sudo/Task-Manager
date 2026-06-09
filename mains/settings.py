@@ -26,6 +26,9 @@ SECRET_KEY = 'django-insecure-*=pj6akb)0@!7)w*-l%(2uesep-^c09@w-3!2b$n^%g1350qc#
 DEBUG = True
 
 ALLOWED_HOSTS = ['*','task-manager-4-c00l.onrender.com']
+CORS_ALLOWED_ORIGINS = [
+    "https://task-manager-frontend-ghf7.onrender.com",
+]
 
 
 # Application definition
@@ -131,9 +134,7 @@ STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 MEDIA_URL='/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
-]
+
 REST_FRAMEWORK={
     "DEFAULT_AUTHENTICATION_CLASS":"rest_framework_simplejwt.authentication.JWTAuthentication"
 }
